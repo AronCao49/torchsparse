@@ -1,7 +1,9 @@
 # Modification Summary
-When using torchsparse 2.1 with RTX 5090 + torch 2.7/2.8 nightly, random CUDA illegal memory errors will occur, but it works perfectly fine with RTX 3090, and I don't know why. The error is said to be related to the CUDA-based hashing in torch 2.1, and anyone can take a look if interested. 
+When using torchsparse 2.1 with RTX 5090 + torch 2.7/2.8 nightly, random CUDA illegal memory errors will occur, but it works perfectly fine with RTX 3090. The error is reportedly related to the CUDA-based hashing in PyTorch 2.1, and anyone interested can take a look (perhaps I will after finishing my thesis :D). 
 
 Anyways, switching from 2.1 to 2.0 can perfectly address this problem, but a few modifications are mandatory to keep its API aligned with the new version of torch. I therefore forked a modified version of Torch 2.0.0, and I hope it can help anyone else in the same trouble as I did. 
+
+Before installation, please checkout to the newly introduced branch to v2.0.0. 
 
 
 # TorchSparse
